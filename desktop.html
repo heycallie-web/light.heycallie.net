@@ -49,6 +49,7 @@ before uploading :
     <script>
       function mobileCheck() {
         // does not include iPad because its dimensions are computer-like, though an iPad without a mouse will not work for dragging -- everything else *should* be fine.
+        // ^ includes ipad now. i'll find some way to work it into mobile
         return /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(
           navigator.userAgent,
         );
@@ -837,11 +838,7 @@ before uploading :
                 <div
                   class="musicRow"
                   onclick="regFileExploreVocaloidClick()"
-                  style="
-                    cursor:
-                      url(assets/cursors/w98hand.cur),
-                      pointer;
-                  "
+                  style="cursor: url(assets/cursors/w98hand.cur), pointer"
                 >
                   <img src="assets/images/Folder Opened.png" />
                   <p>Vocaloid</p>
