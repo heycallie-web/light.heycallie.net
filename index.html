@@ -1,3 +1,6 @@
+<!-- having good coding practice by making ALL of the styles inline <3 i hope you enjoy my website -->
+<!-- https://heycallie.net/LICENSE -->
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -12,65 +15,17 @@
         font-family: Arial;
         font-style: italic;
         font-weight: bold;
+        font-size: 1vw;
       }
 
-      .buttons img {
-        height: 50px;
+      #viewbar span {
+        margin-left: 6px;
       }
 
-      a {
-        color: #0000ee;
-      }
-
-      a:hover {
-        color: #ff0000;
-      }
-
-      p {
-        margin: 0;
-      }
-
-      .header {
-        text-align: left;
-        border: 1px solid black;
-        border-radius: 10px;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        margin-bottom: 0px;
-        /* width: fit-content; */
-        transition: background-color, 0.4s;
-        background-color: cyan;
-        background-image: linear-gradient(to right, white, #00f0ff);
-      }
-
-      .header:hover {
-        background-color: cyan;
-      }
-
-      .locationText {
-        font-size: 20px;
-        font-family: Cascadia Mono;
-        text-decoration: none;
-        color: black;
-        text-align: left;
-        display: block;
-      }
-
-      .locationText:hover {
-        color: rgb(135, 206, 250);
-      }
-
-      .aboutText {
-        margin-left: 20px;
-        margin-right: 20px;
-        border: 1px solid black;
-        height: 50px;
-        padding-left: 5px;
-        padding-right: 5px;
-        padding-top: 5px;
-        background-color: rgb(0, 240, 255, 0.5);
+      #navbar img {
+        height: 4vh;
+        margin-top: 0.5vh;
+        margin-left: 0.5vw;
       }
     </style>
   </head>
@@ -83,9 +38,184 @@
         width: 100vw;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
       "
     >
-      <div id="explorer" style="display: flex; align-items: flex-start"></div>
+      <div
+        id="titleBar"
+        style="
+          color: white;
+          text-shadow: 1px 1px 1px #000;
+          border: 4px solid blue;
+          border-bottom: 0;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+          height: 3vh;
+          width: 89.5vw;
+          display: flex;
+          flex-direction: row;
+          background-image: linear-gradient(
+            to bottom,
+            #255dd4,
+            #255dd4,
+            #255dd4,
+            #56a1ff,
+            #56a1ff,
+            #255dd4
+          );
+          padding-left: 0.5vw;
+          padding-top: 0.5vw;
+        "
+      >
+        <img src="assets/images/ie7.ico" style="height: 1.5vw" />
+        <span
+          >&nbsp;Internet Explorer Home Page - Microsoft Internet Explorer</span
+        >
+      </div>
+
+      <div
+        id="viewbar"
+        style="
+          width: 89.5vw;
+          height: 2vh;
+          background-color: #eeedd9;
+          border: 4px solid blue;
+          border-top: 0;
+          border-bottom: 0;
+          display: flex;
+          flex-direction: row;
+          padding-left: 0.5vw;
+          font-style: normal;
+          padding-bottom: 0.5vh;
+          padding-top: 0.5vh;
+        "
+      >
+        <span style="margin-left: 0"
+          ><span style="text-decoration: underline">F</span>ile</span
+        >
+        <span><span style="text-decoration: underline">E</span>dit</span>
+        <span><span style="text-decoration: underline">V</span>iew</span>
+        <span style="margin-left: 10px"
+          >F<span style="text-decoration: underline; margin-left: 0">a</span
+          >vorites</span
+        >
+        <span><span style="text-decoration: underline">T</span>ools</span>
+        <span><span style="text-decoration: underline">H</span>elp</span>
+      </div>
+
+      <div
+        class="separator"
+        style="
+          width: 90vw;
+          height: 1px;
+          background-color: grey;
+          border-left: 4px solid blue;
+          border-right: 4px solid blue;
+        "
+      ></div>
+
+      <div
+        id="navbar"
+        style="
+          width: 90vw;
+          height: 5vh;
+          background-color: #eeedd9;
+          border-left: 4px solid blue;
+          border-right: 4px solid blue;
+        "
+      >
+        <img src="/assets/images/Back.png" />
+        <img src="/assets/images/Forward.png" />
+        <img src="/assets/images/IE Refresh.png" />
+        <div
+          class="navbarSeparator"
+          style="
+            height: 4vh;
+            width: 0.1vw;
+            background-color: grey;
+            display: inline-flex;
+            margin-left: 0.5vw;
+          "
+        ></div>
+        <img src="/assets/images/IE Home.png" />
+        <img src="/assets/images/Favorites.png" />
+      </div>
+
+      <div
+        class="separator"
+        style="
+          width: 90vw;
+          height: 1px;
+          background-color: grey;
+          border-left: 4px solid blue;
+          border-right: 4px solid blue;
+        "
+      ></div>
+
+      <div
+        id="addbar"
+        style="
+          width: 90vw;
+          height: 3vh;
+          background-color: #eeedd9;
+          border-left: 4px solid blue;
+          border-right: 4px solid blue;
+          display: flex;
+          flex-direction: row;
+        "
+      >
+        <span style="margin-top: 0.5vh; margin-left: 0.5vw">Address</span>
+        <div
+          style="
+            margin-left: 1vw;
+            width: 50vw;
+            height: 10vh;
+            border: 1px solid black;
+            background-color: white;
+            display: flex;
+          "
+        >
+          <img
+            src="/assets/images/ie7.ico"
+            style="height: 2vh; margin-top: 0.5vh"
+          /><span
+            contenteditable
+            style="
+              margin-top: 0.5vh;
+              margin-left: 0.5vw;
+              font-style: normal;
+              font-weight: normal;
+              width: 48vw;
+            "
+            >https://online.heycallie.net</span
+          >
+        </div>
+      </div>
+
+      <div
+        id="explorer"
+        style="
+          display: flex;
+          align-items: flex-start;
+          background-color: white;
+          border: 4px solid blue;
+          border-top: 1px solid black;
+          height: 80vh;
+          width: 89.5vw;
+          padding-left: 0.5vw;
+          font-weight: normal;
+          font-style: normal;
+          flex-direction: column;
+        "
+      >
+        <h1>Callie's Website.</h1>
+        <a href="desktop.html">Desktop.html</a>
+        <a href="whatchacallitsname/"
+          >Whatchacallitsname (still being worked on)</a
+        >
+
+        <a href="https://heycallie.net" style="margin-top: 10px">Return</a>
+      </div>
     </div>
   </body>
 </html>
