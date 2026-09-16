@@ -8,6 +8,22 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="" />
     <style>
+      .you {
+        color: blue;
+        user-select: none;
+        cursor: pointer;
+      }
+
+      .you:hover {
+        text-decoration: underline;
+      }
+
+      .her {
+        color: purple;
+        pointer-events: none;
+        user-select: none;
+      }
+
       body {
         margin: 0;
         background-color: #008080;
@@ -47,11 +63,6 @@
         animation-name: opacityToOne;
         animation-duration: 1s;
         animation-iteration-count: 1;
-      }
-
-      #where {
-        cursor: pointer;
-        user-select: none;
       }
 
       @keyframes opacityToOne {
@@ -103,7 +114,7 @@
           padding-top: 0.5vw;
         "
       >
-        <img src="assets/images/ie7.ico" style="height: 1.5vw" />
+        <img src="assets/images/ie7.ico" style="height: 1.3vw" />
         <span
           >&nbsp;Internet Explorer Home Page - Microsoft Internet Explorer</span
         >
@@ -213,7 +224,7 @@
         >
           <img
             src="/assets/images/ie7.ico"
-            style="height: 2vh; margin-top: 0.5vh"
+            style="height: 2vh; margin-top: 0.5vh; margin-left: 0.5vh"
           /><span
             contenteditable
             style="
@@ -250,21 +261,38 @@
           style="
             text-align: center;
             font-family: Times;
-            letter-spacing: -1px;
+            letter-spacing: -8px;
             font-size: 6vw;
           "
         >
-          Website.
+          Space.
         </h1>
-
-        <p>You open your eyes to a blindingly white room of sorts.</p>
-
-        <p id="where" onclick="toggleWhereText()">&gt; ...Where am I?</p>
-        <p id="whereText" class="hidden" style="opacity: 0">
-          You made it! You've just landed safely in Callie's Domain
+        <!-- purple for me, light blue for narrator..? -->
+        <p style="margin-bottom: 2vh">
+          You open your eyes to a blindingly white room of sorts. You can't see
+          any walls — or a floor, or ceiling, for that matter — but you can
+          barely make out a figure standing in front of you.
         </p>
-        <p id="what">&gt; What are you?</p>
-        <p id="wherenow">&gt; Where do I go now?</p>
+
+        <p id="where" onclick="toggleText('whereText')" class="you">
+          &gt; ...Where am I?
+        </p>
+        <p id="whereText" class="hidden, her" style="opacity: 0">
+          You made it!
+        </p>
+        <br />
+        <p id="what" onclick="toggleText('whatText')" class="you">
+          &gt; What are you?
+        </p>
+        <p id="whatText" class="hidden, her" style="opacity: 0">Placeholder.</p>
+        <br />
+        <p id="wherenow" onclick="toggleText('wherenowText')" class="you">
+          &gt; Where do I go now?
+        </p>
+        <p id="wherenowText" class="hidden, her" style="opacity: 0">
+          Placeholder.
+        </p>
+
         <br />
         <a href="desktop.html">Desktop.html</a>
         <a href="whatchacallitsname/"
@@ -278,14 +306,14 @@
     </div>
 
     <script>
-      function toggleWhereText() {
-        const whereText = document.getElementById("whereText");
-        if (whereText.classList.contains("opacityAnim")) {
+      function toggleText(id) {
+        const Text = document.getElementById(id);
+        if (Text.classList.contains("opacityAnim")) {
           return;
         }
-        whereText.classList.remove("hidden");
-        whereText.classList.toggle("opacityAnim");
-        whereText.style.opacity = "1";
+        Text.classList.remove("hidden");
+        Text.classList.toggle("opacityAnim");
+        Text.style.opacity = "1";
       }
     </script>
   </body>
