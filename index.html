@@ -12,6 +12,7 @@
         color: blue;
         user-select: none;
         cursor: pointer;
+        text-align: center;
       }
 
       .you:hover {
@@ -22,6 +23,7 @@
         color: purple;
         pointer-events: none;
         user-select: none;
+        text-align: center;
       }
 
       body {
@@ -73,6 +75,21 @@
         to {
           opacity: 100%;
         }
+      }
+
+      a {
+        pointer-events: all;
+      }
+
+      #desktopRefer {
+        color: blue;
+        pointer-events: all;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+
+      #desktopRefer:hover {
+        color: red;
       }
     </style>
   </head>
@@ -277,27 +294,27 @@
         <p id="where" onclick="toggleText('whereText')" class="you">
           &gt; ...Where am I?
         </p>
-        <p id="whereText" class="hidden, her" style="opacity: 0">
-          You made it!
-        </p>
+        <p id="whereText" class="hidden her" style="opacity: 0">You made it!</p>
         <br />
         <p id="what" onclick="toggleText('whatText')" class="you">
           &gt; What are you?
         </p>
-        <p id="whatText" class="hidden, her" style="opacity: 0">Placeholder.</p>
+        <p id="whatText" class="hidden her" style="opacity: 0">Placeholder.</p>
         <br />
         <p id="wherenow" onclick="toggleText('wherenowText')" class="you">
           &gt; Where do I go now?
         </p>
-        <p id="wherenowText" class="hidden, her" style="opacity: 0">
-          Placeholder.
+        <p id="wherenowText" class="hidden her" style="opacity: 0">
+          <span style="color: black">A doorway appears to your side.<br /></span
+          >Feel free to explore to where your heart desires.<br />
+          <span onclick="desktopRefer()" id="desktopRefer">Desktop.html</span
+          ><br />
+          <a href="whatchacallitsname/"
+            >Whatchacallitsname/index.html (still being worked on)</a
+          >
         </p>
 
         <br />
-        <a href="desktop.html">Desktop.html</a>
-        <a href="whatchacallitsname/"
-          >Whatchacallitsname/index.html (still being worked on)</a
-        >
 
         <a href="https://heycallie.net" style="margin-top: 10px; color: purple"
           >&lt;- Return</a
@@ -314,6 +331,28 @@
         Text.classList.remove("hidden");
         Text.classList.toggle("opacityAnim");
         Text.style.opacity = "1";
+      }
+
+      function desktopRefer() {
+        var explorer = document.getElementById("explorer");
+        explorer.style.justifyContent = "center";
+        explorer.innerHTML =
+          "<h1 style='font-size: 2vw'>You log onto a computer</h1>";
+        setTimeout(function () {
+          explorer.innerHTML =
+            "<h1 style='font-size: 2vw'>You log onto a computer.</h1>";
+        }, 700);
+        setTimeout(function () {
+          explorer.innerHTML =
+            "<h1 style='font-size: 2vw'>You log onto a computer..</h1>";
+        }, 1400);
+        setTimeout(function () {
+          explorer.innerHTML =
+            "<h1 style='font-size: 2vw'>You log onto a computer...</h1>";
+        }, 2100);
+        setTimeout(function () {
+          window.location = "https://online.heycallie.net/desktop.html";
+        }, 2800);
       }
     </script>
   </body>

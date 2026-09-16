@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      /* Container styling */
+      .letter {
+        display: inline-block;
+        opacity: 0;
+        animation: fadeIn 0s forwards;
+        /* shake 1.5s infinite linear; */
+        animation-delay: var(--delay), calc(var(--delay) + 0.01s);
+      }
+
+      /* Make space characters visible */
+      .space {
+        width: 0.25em;
+      }
+
+      /* Fade-in appearance */
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* Individual letter shake */
+      @keyframes shake {
+        0% {
+          transform: translateY(0);
+        }
+        20% {
+          transform: translateY(-1px);
+        }
+        40% {
+          transform: translateY(1px);
+        }
+        60% {
+          transform: translateY(-1px);
+        }
+        80% {
+          transform: translateY(1px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p id="animated-text">Hello World!</p>
+
+    <script>
+      function animateText(id) {
+        const textElement = document.getElementById(id);
+        const text = textElement.textContent;
+        textElement.textContent = ""; // Clear original text
+
+        // Wrap each character in a span with a calculated delay
+
+        text.split("").forEach((char, index) => {
+          const span = document.createElement("span");
+
+          if (char === " ") {
+            span.className = "letter space";
+          } else {
+            span.className = "letter";
+            span.textContent = char;
+          }
+
+          // Set custom CSS variable for 0.1s incremental delay
+          span.style.setProperty("--delay", `${index * 0.07}s`);
+          textElement.appendChild(span);
+        });
+      }
+
+      animateText("animated-text");
+    </script>
+  </body>
+</html>
