@@ -970,6 +970,16 @@ a:hover {
   src: url(assets/fonts/Wingdings-Regular.ttf) format("truetype");
 }
 
+@font-face {
+  font-family: "Uncial Antiqua";
+  src: url(assets/fonts/UncialAntiqua-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Scoutie Sans";
+  src: url(assets/fonts/ScoutieSans-VariableFont_wght.ttf) format("truetype");
+}
+
 @keyframes rainbow-color-change {
   0%,
   100% {

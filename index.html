@@ -13,6 +13,7 @@
         user-select: none;
         cursor: pointer;
         text-align: center;
+        font-family: "Scoutie Sans";
       }
 
       .you:hover {
@@ -24,6 +25,13 @@
         pointer-events: none;
         user-select: none;
         text-align: center;
+        font-family: "Uncial Antiqua";
+        text-transform: uppercase;
+        color: rgba(59, 0, 252, 0.25);
+        text-shadow: 1px 1px 1px rgb(45, 95, 166);
+        /* background-image: linear-gradient(90deg, white, lavender); */
+        color: transparent;
+        background-clip: text;
       }
 
       body {
@@ -272,29 +280,35 @@
           flex-direction: column;
           font-family: Arial;
           align-items: center;
+          text-align: center;
         "
       >
         <h1
           style="
             text-align: center;
             font-family: Times;
-            letter-spacing: -8px;
+            letter-spacing: -6px;
             font-size: 6vw;
           "
         >
           Space.
         </h1>
         <!-- purple for me, light blue for narrator..? -->
-        <p style="margin-bottom: 2vh">
+        <p style="margin-bottom: 2vh; text-align: left">
           You open your eyes to a blindingly white room of sorts. You can't see
           any walls — or a floor, or ceiling, for that matter — but you can
-          barely make out a figure standing in front of you.
+          barely make out a figure standing in front of you. You feel as though
+          it can understand you.
         </p>
 
         <p id="where" onclick="toggleText('whereText')" class="you">
           &gt; ...Where am I?
         </p>
-        <p id="whereText" class="hidden her" style="opacity: 0">You made it!</p>
+        <p id="whereText" class="hidden" style="opacity: 0">
+          <span class="her">You made it!</span><br />You make an attempt to look
+          at the figure, but it's too bright to focus. It seems almost happy to
+          see you here, wherever 'here' is.
+        </p>
         <br />
         <p id="what" onclick="toggleText('whatText')" class="you">
           &gt; What are you?
@@ -304,9 +318,11 @@
         <p id="wherenow" onclick="toggleText('wherenowText')" class="you">
           &gt; Where do I go now?
         </p>
-        <p id="wherenowText" class="hidden her" style="opacity: 0">
+        <p id="wherenowText" class="hidden" style="opacity: 0">
           <span style="color: black">A doorway appears to your side.<br /></span
-          >Feel free to explore to where your heart desires.<br />
+          ><span class="her"
+            >Feel free to explore where your heart desires.</span
+          ><br />
           <span onclick="desktopRefer()" id="desktopRefer">Desktop.html</span
           ><br />
           <a href="whatchacallitsname/"
@@ -341,18 +357,18 @@
         setTimeout(function () {
           explorer.innerHTML =
             "<h1 style='font-size: 2vw'>You log onto a computer.</h1>";
-        }, 700);
+        }, 600);
         setTimeout(function () {
           explorer.innerHTML =
             "<h1 style='font-size: 2vw'>You log onto a computer..</h1>";
-        }, 1400);
+        }, 1200);
         setTimeout(function () {
           explorer.innerHTML =
             "<h1 style='font-size: 2vw'>You log onto a computer...</h1>";
-        }, 2100);
+        }, 1800);
         setTimeout(function () {
           window.location = "https://online.heycallie.net/desktop.html";
-        }, 2800);
+        }, 2400);
       }
     </script>
   </body>
