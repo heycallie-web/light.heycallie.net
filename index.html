@@ -14,6 +14,7 @@
         cursor: pointer;
         text-align: center;
         font-family: "Scoutie Sans";
+        margin-top: 1vh;
       }
 
       .you:hover {
@@ -120,11 +121,6 @@
 
       #desktopRefer:hover {
         color: red;
-      }
-
-      #what,
-      #wherenow {
-        margin-top: 10px;
       }
     </style>
   </head>
@@ -322,7 +318,7 @@
           Space.
         </h1>
         <!-- purple for me, light blue for narrator..? -->
-        <p style="margin-bottom: 2vh; text-align: left">
+        <p style="text-align: left">
           You open your eyes to a blindingly white room of sorts. You can't see
           any walls — or a floor, or ceiling, for that matter — but you can
           barely make out a figure standing in front of you. You feel as though
@@ -336,9 +332,9 @@
           back.<br />
           <span class="her">You made it!</span><br />A voice resounds from the
           inside of your head. It is not a language you know, but you understand
-          nevertheless.
+          nevertheless. <br />
         </p>
-        <br />
+
         <p id="what" onclick="openWhat()" class="you hidden">
           &gt; What are you?
         </p>
@@ -346,9 +342,9 @@
           You try to take a closer look, but to no avail; it's too bright to
           make out any features.<br />
           <span class="her">I am Kalliopeia</span>, it says.
-          <span class="her">Architect and master of this domain.</span>
+          <span class="her">Architect and master of this domain.</span> <br />
         </p>
-        <br />
+
         <p id="wherenow" onclick="openWherenow()" class="you hidden">
           &gt; Where do I go now?
         </p>
@@ -364,9 +360,8 @@
           <a href="whatchacallitsname/"
             >Whatchacallitsname/index.html (still being worked on)</a
           >
+          <br />
         </p>
-
-        <br />
 
         <a
           href="https://heycallie.net"
@@ -401,11 +396,11 @@
         const Text = document.getElementById("wherenowText");
         Text.classList.remove("hidden");
         Text.classList.add("opacityAnim");
-        setTimeout(function () {
-          document
-            .querySelectorAll("#where, #whereText, #what, #whatText, #wherenow")
-            .forEach((el) => el.classList.add("hidden"));
-        }, 3000);
+        // setTimeout(function () {
+        //   document
+        //     .querySelectorAll("#where, #whereText, #what, #whatText, #wherenow")
+        //     .forEach((el) => el.classList.add("hidden"));
+        // }, 3000);
       }
 
       function desktopRefer() {
