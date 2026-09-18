@@ -29,9 +29,8 @@
         text-transform: uppercase;
         color: rgba(59, 0, 252, 0.25);
         text-shadow: 1px 1px 1px rgb(45, 95, 166);
-        /* background-image: linear-gradient(90deg, white, lavender); */
-        color: transparent;
-        background-clip: text;
+        animation: slightShake 1s linear infinite;
+        display: inline-block;
       }
 
       body {
@@ -79,9 +78,32 @@
         from {
           opacity: 0%;
         }
-
         to {
           opacity: 100%;
+        }
+      }
+
+      @keyframes slightShake {
+        0% {
+          transform: translate(0px, 0px);
+        }
+        16.7% {
+          transform: translate(1px, 1px);
+        }
+        33.3% {
+          transform: translate(1px, 0px);
+        }
+        50% {
+          transform: translate(1px, -1px);
+        }
+        66.7% {
+          transform: translate(-1px, 1px);
+        }
+        83.3% {
+          transform: translate(-1px, -1px);
+        }
+        100% {
+          transform: translate(0px, 0px);
         }
       }
 
@@ -98,6 +120,11 @@
 
       #desktopRefer:hover {
         color: red;
+      }
+
+      #what,
+      #wherenow {
+        margin-top: 10px;
       }
     </style>
   </head>
@@ -281,6 +308,7 @@
           font-family: Arial;
           align-items: center;
           text-align: center;
+          overflow-y: scroll;
         "
       >
         <h1
@@ -301,27 +329,35 @@
           it can understand you.
         </p>
 
-        <p id="where" onclick="toggleText('whereText')" class="you">
-          &gt; ...Where am I?
-        </p>
-        <p id="whereText" class="hidden" style="opacity: 0">
-          <span class="her">You made it!</span><br />You make an attempt to look
-          at the figure, but it's too bright to focus. It seems almost happy to
-          see you here, wherever 'here' is.
+        <p id="where" onclick="openWhere()" class="you">&gt; ...Where am I?</p>
+        <p id="whereText" class="hidden">
+          A figure stands in front of you. You are unable to make out much of
+          what this being is, but notice beautiful wings sprouting from its
+          back.<br />
+          <span class="her">You made it!</span><br />A voice resounds from the
+          inside of your head. It is not a language you know, but you understand
+          nevertheless.
         </p>
         <br />
-        <p id="what" onclick="toggleText('whatText')" class="you">
+        <p id="what" onclick="openWhat()" class="you hidden">
           &gt; What are you?
         </p>
-        <p id="whatText" class="hidden her" style="opacity: 0">Placeholder.</p>
+        <p id="whatText" class="hidden">
+          You try to take a closer look, but to no avail; it's too bright to
+          make out any features.<br />
+          <span class="her">I am Kalliopeia</span>, it says.
+          <span class="her">Architect and master of this domain.</span>
+        </p>
         <br />
-        <p id="wherenow" onclick="toggleText('wherenowText')" class="you">
+        <p id="wherenow" onclick="openWherenow()" class="you hidden">
           &gt; Where do I go now?
         </p>
-        <p id="wherenowText" class="hidden" style="opacity: 0">
+        <p id="wherenowText" class="hidden">
           <span style="color: black">A doorway appears to your side.<br /></span
           ><span class="her"
             >Feel free to explore where your heart desires.</span
+          ><span style="color: black"
+            >The being smiles at you. It disappears as you blink.</span
           ><br />
           <span onclick="desktopRefer()" id="desktopRefer">Desktop.html</span
           ><br />
@@ -332,21 +368,44 @@
 
         <br />
 
-        <a href="https://heycallie.net" style="margin-top: 10px; color: purple"
+        <a
+          href="https://heycallie.net"
+          style="margin-top: 10px; margin-bottom: 20px; color: purple"
           >&lt;- Return</a
         >
       </div>
     </div>
 
     <script>
-      function toggleText(id) {
-        const Text = document.getElementById(id);
-        if (Text.classList.contains("opacityAnim")) {
-          return;
-        }
+      function openWhere() {
+        const Text = document.getElementById("whereText");
         Text.classList.remove("hidden");
-        Text.classList.toggle("opacityAnim");
-        Text.style.opacity = "1";
+        Text.classList.add("opacityAnim");
+        setTimeout(function () {
+          document.getElementById("what").classList.remove("hidden");
+          document.getElementById("what").classList.add("opacityAnim");
+        }, 2000);
+      }
+
+      function openWhat() {
+        const Text = document.getElementById("whatText");
+        Text.classList.remove("hidden");
+        Text.classList.add("opacityAnim");
+        setTimeout(function () {
+          document.getElementById("wherenow").classList.remove("hidden");
+          document.getElementById("wherenow").classList.add("opacityAnim");
+        }, 2000);
+      }
+
+      function openWherenow() {
+        const Text = document.getElementById("wherenowText");
+        Text.classList.remove("hidden");
+        Text.classList.add("opacityAnim");
+        setTimeout(function () {
+          document
+            .querySelectorAll("#where, #whereText, #what, #whatText, #wherenow")
+            .forEach((el) => el.classList.add("hidden"));
+        }, 3000);
       }
 
       function desktopRefer() {
