@@ -122,6 +122,18 @@
       #desktopRefer:hover {
         color: red;
       }
+
+      #skipButton {
+        margin-bottom: 1vh;
+        margin-top: 1vh;
+        color: beige;
+        text-shadow: 1px 1px 1px black;
+        cursor: pointer;
+      }
+
+      #skipButton:hover {
+        color: purple;
+      }
     </style>
   </head>
 
@@ -317,7 +329,10 @@
         >
           Space.
         </h1>
-        <!-- purple for me, light blue for narrator..? -->
+
+        <span id="skipButton" onclick="openWherenow()"
+          >&gt;&gt;Skip?&lt;&lt;</span
+        >
         <p style="text-align: left">
           You open your eyes to a blindingly white room of sorts. You can't see
           any walls — or a floor, or ceiling, for that matter — but you can
