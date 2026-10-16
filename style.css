@@ -8,52 +8,6 @@ html {
   cursor: url("/assets/cursors/w98normal.cur"), auto;
 }
 
-#navBar {
-  /* border: 1px solid black; */
-  height: calc(2.6vh + 3px);
-  background-color: var(--navbar-background);
-  font-family: Pixelify Sans;
-  width: calc(100% - 2px);
-  top: 0px;
-  position: sticky;
-  z-index: 11;
-  -webkit-user-select: none;
-  user-select: none;
-}
-#navBar p {
-  margin: 0px;
-}
-
-.navButton {
-  color: black;
-  position: absolute;
-  margin-top: 0px !important;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-.navButton:hover {
-  background-color: var(--dropdown-hover);
-  border-color: var(--dropdown-hover);
-  color: white;
-}
-
-.navDropdown {
-  position: absolute;
-  text-align: left;
-  margin-top: 19px;
-  color: black;
-  z-index: 2;
-  background-color: var(--dropdown-background);
-}
-
-#fileButton {
-  text-align: center;
-}
-
-#fileDropdown.hidden {
-  display: none;
-}
-
 #selection {
   text-align: left;
   padding: 5px;
@@ -61,29 +15,6 @@ html {
 #selection:hover {
   background-color: var(--dropdown-hover);
   color: white;
-}
-
-#editButton {
-  margin-left: 36px;
-}
-
-#editDropdown {
-  margin-left: 36px;
-}
-#editDropdown.hidden {
-  display: none;
-}
-
-#viewButton {
-  margin-left: 79px !important;
-}
-
-#viewDropdown {
-  margin-left: 100px;
-}
-
-#viewDropdown.hidden {
-  display: none;
 }
 
 #navBar :hover {
@@ -1014,4 +945,31 @@ a:hover {
 
 .hidden {
   display: none !important;
+}
+/*
+.navButton {
+  color: black;
+  position: absolute;
+  margin-top: 0px !important;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.navButton:hover {
+  background-color: var(--dropdown-hover);
+  border-color: var(--dropdown-hover);
+  color: white;
+}
+
+.navDropdown {
+  position: absolute;
+  text-align: left;
+  margin-top: 19px;
+  color: black;
+  z-index: 2;
+  background-color: var(--dropdown-background);
+}
+*/
+
+.navButton:hover {
+  background-color: gray;
 }
