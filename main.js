@@ -17,18 +17,18 @@ document
   .addEventListener("mouseenter", regStartMenuEnter);
 
 function changeBackgroundWaterlilies() {
-  const element = document.querySelector(".fullDocument");
-  element.style.backgroundImage = "url('assets/images/windows_xp_102.jpg')";
+  document.body.style.backgroundImage =
+    "url('assets/images/windows_xp_102.jpg')";
 }
 
 function changeBackgroundDefault() {
-  const element = document.querySelector(".fullDocument");
-  element.style.backgroundImage = "url('assets/images/windows_xp_14.jpg')";
+  document.body.style.backgroundImage =
+    "url('assets/images/windows_xp_14.jpg')";
 }
 
 function changeBackgroundTulips() {
-  const element = document.querySelector(".fullDocument");
-  element.style.backgroundImage = "url('assets/images/windows_xp_35.jpg')";
+  document.body.style.backgroundImage =
+    "url('assets/images/windows_xp_35.jpg')";
 }
 
 function regStartMenuPress() {

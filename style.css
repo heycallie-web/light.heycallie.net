@@ -936,24 +936,18 @@ a:hover {
   } /* Violet */
 }
 
-.chiron-goround-tc-blogfont {
-  font-family: "Chiron GoRound TC", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 200;
-  font-style: normal;
-}
-
 .hidden {
   display: none !important;
 }
-/*
+
 .navButton {
   color: black;
-  position: absolute;
   margin-top: 0px !important;
+  padding-right: 5px !important;
   padding-left: 5px;
-  padding-right: 5px;
+  margin-left: 0px !important;
 }
+/*
 .navButton:hover {
   background-color: var(--dropdown-hover);
   border-color: var(--dropdown-hover);
