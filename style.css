@@ -943,8 +943,8 @@ a:hover {
 .navButton {
   color: black;
   margin-top: 0px !important;
-  padding-right: 5px !important;
-  padding-left: 5px;
+  /* padding-right: 5px !important;
+  padding-left: 5px; */
   margin-left: 0px !important;
 }
 /*
@@ -966,4 +966,22 @@ a:hover {
 
 .navButton:hover {
   background-color: gray;
+  color: white;
+}
+
+.navButton {
+  margin-right: 0.5vw;
+  padding-left: 0.25%;
+  padding-right: 0.25%;
+  cursor: pointer;
+  user-select: none;
+}
+
+.dropdown {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  border: 1px solid green;
+  position: absolute;
+  top: 9vh;
 }
