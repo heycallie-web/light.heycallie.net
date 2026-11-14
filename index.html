@@ -1,5 +1,6 @@
 <!-- having good coding practice by making ALL of the styles inline <3 i hope you enjoy my website -->
 <!-- https://heycallie.net/LICENSE -->
+<!-- INCREDIBLY cool idea-- i make this entire page a popup, and make the new index just the teal background so it looks more like a window on a computer screen. GENIUS !!!! -->
 
 <!doctype html>
 <html lang="en">
@@ -216,7 +217,9 @@
         >
       </div>
 
-      <div id="fileDropdown" class="dropdown hidden" style="left: 5.5vw"></div>
+      <div id="fileDropdown" class="dropdown hidden" style="left: 5.5vw">
+        <span>New Tab</span>
+      </div>
       <div id="editDropdown" class="dropdown hidden" style="left: 8.18vw"></div>
       <div id="viewDropdown" class="dropdown hidden" style="left: 11vw"></div>
       <div
@@ -467,7 +470,20 @@
 
       // if any other button is clicked, re-toggle button and then call the function again. somehow. you got this
       function openDropdown(button) {
-        document.getElementById(button + "Dropdown").classList.toggle("hidden");
+        let array = ["file", "edit", "view", "favorites", "tools", "help"];
+
+        let index = array.indexOf(button);
+        if (index !== -1) {
+          array.splice(index, 1);
+        }
+
+        array.forEach((item) => {
+          let otherDropdown = document.getElementById(item + "Dropdown");
+          otherDropdown.classList.add("hidden");
+        });
+
+        let targetDropdown = document.getElementById(button + "Dropdown");
+        targetDropdown.classList.toggle("hidden");
       }
 
       document

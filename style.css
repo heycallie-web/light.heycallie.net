@@ -373,13 +373,6 @@ html {
   overflow: hidden;
 }
 
-#stupidFuckingWorkingBulletPoints {
-  list-style-position: inside;
-  margin: 0px;
-  padding-left: 0px;
-  margin-bottom: 17px;
-}
-
 #startMenuButton {
   background-image: url("assets/images/start.png");
   background-size: cover;
@@ -978,10 +971,18 @@ a:hover {
 }
 
 .dropdown {
-  height: 100px;
-  width: 100px;
+  height: fit-content;
+  width: fit-content;
   background-color: blue;
   border: 1px solid green;
   position: absolute;
   top: 9vh;
+  color: white;
+  font-weight: normal;
+  font-style: normal;
+  font-family: Arial;
+  font-size: 0.75vw;
+}
+
+.dropDown * {
 }
