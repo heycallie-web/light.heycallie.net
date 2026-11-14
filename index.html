@@ -311,19 +311,19 @@
             src="/assets/images/ie7.ico"
             style="height: 2vh; margin-top: 0.5vh; margin-left: 0.5vh"
           /><span
-            contenteditable
             style="
               margin-top: 0.5vh;
               margin-left: 0.5vw;
               font-style: normal;
               font-weight: normal;
-              width: 48vw;
             "
-            >https://online.heycallie.net</span
+            >https://<span contenteditable id="addressBar"
+              >online.heycallie.net</span
+            ></span
           >
         </div>
       </div>
-
+      <!--  style="width: 48vw" -->
       <div
         id="explorer"
         style="
@@ -468,6 +468,15 @@
       // if any other button is clicked, re-toggle button and then call the function again. somehow. you got this
       function openDropdown(button) {
         document.getElementById(button + "Dropdown").classList.toggle("hidden");
+      }
+      document
+        .getElementById("addressBar")
+        .addEventListener("keypress", logKey);
+
+      function logKey(key) {
+        if (key.code == "Enter") {
+          window.location = document.getElementById("addressBar").innerHTML;
+        }
       }
     </script>
   </body>
