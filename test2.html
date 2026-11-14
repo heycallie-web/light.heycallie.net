@@ -1,16 +1,98 @@
 <!doctype html>
-<html lang="en">
-  <head> </head>
-  <body>
-    <button onclick="goFullscreen()">Go Fullscreen</button>
-
-    <script>
-      function goFullscreen() {
-        document.documentElement.requestFullscreen();
-        setTimeout(() => {
-          document.exitFullscreen();
-        }, 1000);
+<html>
+  <head>
+    <style>
+      body {
+        display: flex;
+        align-items: top;
+        flex-direction: row;
+        justify-content: center;
       }
-    </script>
+      * {
+        margin: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      #content {
+        height: 100vh;
+        width: 40vw;
+        padding: 1vw;
+      }
+
+      #sidebar {
+        width: fit-content;
+        border: 1px solid black;
+        position: sticky;
+        top: 0px;
+      }
+
+      #sidebar a {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="sidebar">
+      Contents<br />
+      <a href="#">Top</a>
+      <a href="#Biography">Biography</a>
+      <a href="#Early life and education">Early life and education</a>
+      <a href="#Aerial Silks">Aerial Silks</a>
+      <a href="#Academic Decathlon">Academic Decathlon</a>
+      <a href="#Personality">Personality</a>
+      <a href="#Preferences">Preferences</a>
+    </div>
+    <div id="content">
+      <h1>Anna Herrlinger</h1>
+      <hr />
+      <span class="fromDisclaimer"
+        >From Calliopedia, the free encyclopedia :)</span
+      ><br />
+      <span
+        >Anna Charlotte Herrlinger (born August 28, 2012) is an American student
+        living in Green Lane, Pennsylvania.
+      </span>
+      <h2 id="Biography">Biography</h2>
+      <hr />
+      <h3 id="Early life and education">Early life and education</h3>
+      <hr />
+      <span
+        >Anna was born on August 28, 2012, in Bryn Mawr, PA. She was the second
+        child born to Brad and Carolyn Herrlinger, after Maya Herrlinger (2008).
+        She also has an exchange sister &mdash; Rahyun, who lives in Korea, and
+        stays with the Herrlingers on trips.<br /><br />In 2017, Anna attended
+        kindergarten for two months before dropping out. The next year, she was
+        in a homeschool co-op for the second grade at Schola. She continued with
+        co-ops for the third grade, this time with Explorations. Anna attended
+        online school for the fourth grade through the Commonwealth Charter
+        Academy (CCA), as well as continuing with the Explorations co-op. For
+        the fifth grade, Anna began attending public school at Salford Hills,
+        and continued with public school through the sixth grade, attending
+        Indian Valley Middle School (IVMS). She went back to co-op with
+        Explorations for the seventh grade, as well as being self-taught. Anna
+        returned to IVMS for the eighth grade, and enrolled in Souderton Area
+        High School (SAHS) for the ninth grade, which she is currently
+        attending.
+      </span>
+      <h3 id="Academic Decathlon">Academic Decathlon</h3>
+      <hr />
+      <h3 id="Aerial Silks">Aerial Silks</h3>
+      <hr />
+      <h2 id="Personality">Personality</h2>
+      <hr />
+      <h2 id="Preferences">Preferences</h2>
+    </div>
   </body>
 </html>
