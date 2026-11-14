@@ -1,6 +1,5 @@
 <!-- having good coding practice by making ALL of the styles inline <3 i hope you enjoy my website -->
 <!-- https://heycallie.net/LICENSE -->
-<!-- INCREDIBLY cool idea-- i make this entire page a popup, and make the new index just the teal background so it looks more like a window on a computer screen. GENIUS !!!! -->
 
 <!doctype html>
 <html lang="en">
@@ -220,23 +219,22 @@
       <div id="fileDropdown" class="dropdown hidden" style="left: 5.5vw">
         <span>New Tab</span>
       </div>
-      <div id="editDropdown" class="dropdown hidden" style="left: 8.18vw"></div>
-      <div id="viewDropdown" class="dropdown hidden" style="left: 11vw"></div>
-      <div
-        id="favoritesDropdown"
-        class="dropdown hidden"
-        style="left: 14.2vw"
-      ></div>
-      <div
-        id="toolsDropdown"
-        class="dropdown hidden"
-        style="left: 19.6vw"
-      ></div>
-      <div
-        id="helpDropdown"
-        class="dropdown hidden"
-        style="left: 23.12vw"
-      ></div>
+      <div id="editDropdown" class="dropdown hidden" style="left: 8.18vw">
+        <span>Undo</span><br />
+        <span>Redo</span>
+      </div>
+      <div id="viewDropdown" class="dropdown hidden" style="left: 11vw">
+        <span>New Tab</span>
+      </div>
+      <div id="favoritesDropdown" class="dropdown hidden" style="left: 14.2vw">
+        <span>New Tab</span>
+      </div>
+      <div id="toolsDropdown" class="dropdown hidden" style="left: 19.6vw">
+        <span>New Tab</span>
+      </div>
+      <div id="helpDropdown" class="dropdown hidden" style="left: 23.12vw">
+        <span>Get Help</span>
+      </div>
 
       <div
         class="separator"
@@ -486,6 +484,15 @@
         targetDropdown.classList.toggle("hidden");
       }
 
+      document
+        .getElementById("addressBar")
+        .addEventListener("keypress", logKey);
+
+      function logKey(key) {
+        if (key.code == "Enter") {
+          window.location = document.getElementById("addressBar").innerHTML;
+        }
+      }
       document
         .getElementById("addressBar")
         .addEventListener("keypress", logKey);

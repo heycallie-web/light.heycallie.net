@@ -982,7 +982,10 @@ a:hover {
   font-style: normal;
   font-family: Arial;
   font-size: 0.75vw;
+  padding: 0.25vw;
+  cursor: pointer;
 }
 
-.dropDown * {
+.dropDown *:hover {
+  background-color: green;
 }

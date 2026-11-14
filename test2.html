@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+  <head> </head>
+  <body>
+    <button onclick="goFullscreen()">Go Fullscreen</button>
+
+    <script>
+      function goFullscreen() {
+        document.documentElement.requestFullscreen();
+        setTimeout(() => {
+          document.exitFullscreen();
+        }, 1000);
+      }
+    </script>
+  </body>
+</html>
