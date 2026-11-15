@@ -22,6 +22,7 @@
           "Open Sans",
           "Helvetica Neue",
           sans-serif;
+        line-height: 26px;
       }
 
       #content {
@@ -40,12 +41,71 @@
       #sidebar a {
         display: block;
       }
+
+      h1,
+      h2 {
+        font-family: "Linux Libertine";
+        font-weight: normal;
+      }
+
+      h1 {
+        border-bottom: 1px solid black;
+        padding-bottom: 12px;
+      }
+
+      h2 {
+        margin-bottom: 6px;
+        border-bottom: 1px solid black;
+        margin-top: 6px;
+        padding-top: 12px;
+        padding-bottom: 4px;
+      }
+
+      h3 {
+        margin-top: 5px;
+        padding-top: 10px;
+        margin-bottom: 5px;
+      }
+
+      a {
+        color: #36c;
+      }
+
+      .noLink {
+        color: #bf3c2c;
+      }
+
+      .fromDisclaimer {
+        font-size: 13px !important;
+        margin: 0;
+      }
+
+      span {
+        margin-top: 8px;
+        margin-bottom: 16px;
+        display: block;
+      }
+
+      table {
+        text-align: left;
+        border: 1px solid black;
+        background-color: gray;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        padding: 6px;
+      }
+
+      th {
+        vertical-align: top;
+        padding-right: 5px;
+      }
     </style>
   </head>
 
   <body>
     <div id="sidebar">
-      Contents<br />
+      Contents
+      <hr />
       <a href="#">Top</a>
       <a href="#Biography">Biography</a>
       <a href="#Early life and education">Early life and education</a>
@@ -56,43 +116,127 @@
     </div>
     <div id="content">
       <h1>Anna Herrlinger</h1>
-      <hr />
       <span class="fromDisclaimer"
-        >From Calliopedia, the free encyclopedia :)</span
-      ><br />
+        >From Calliopedia, <i>your</i> free encyclopedia :3</span
+      >
       <span
-        >Anna Charlotte Herrlinger (born August 28, 2012) is an American student
-        living in Green Lane, Pennsylvania.
+        ><b>Anna Charlotte Herrlinger</b> (born August 28, 2012) is an American
+        student living in Green Lane, Pennsylvania. She's incredibly cool :)
       </span>
       <h2 id="Biography">Biography</h2>
-      <hr />
       <h3 id="Early life and education">Early life and education</h3>
-      <hr />
+      <table style="float: right">
+        <tbody>
+          <tr>
+            <th colspan="2" style="text-align: center">Anna Herrlinger</th>
+          </tr>
+
+          <tr>
+            <th>Born</th>
+            <td>
+              Anna Charlotte Herrlinger<br />August 28 2012<br />Bryn Mawr,
+              Pennsylvania, United States
+            </td>
+          </tr>
+          <tr>
+            <th>Spouse</th>
+            <td><a href="" class="noLink">Callie Littler</a></td>
+          </tr>
+          <tr>
+            <th>Children</th>
+            <td>
+              Blergh<br />Blob<br />Lazarus<br />Brad<br />Maddie<br />Jasper<br />Asami
+            </td>
+          </tr>
+          <tr>
+            <th>Parents</th>
+            <td>Brad Herrlinger<br />Carolyn Herrlinger</td>
+          </tr>
+        </tbody>
+      </table>
       <span
-        >Anna was born on August 28, 2012, in Bryn Mawr, PA. She was the second
-        child born to Brad and Carolyn Herrlinger, after Maya Herrlinger (2008).
-        She also has an exchange sister &mdash; Rahyun, who lives in Korea, and
-        stays with the Herrlingers on trips.<br /><br />In 2017, Anna attended
-        kindergarten for two months before dropping out. The next year, she was
-        in a homeschool co-op for the second grade at Schola. She continued with
-        co-ops for the third grade, this time with Explorations. Anna attended
-        online school for the fourth grade through the Commonwealth Charter
-        Academy (CCA), as well as continuing with the Explorations co-op. For
-        the fifth grade, Anna began attending public school at Salford Hills,
-        and continued with public school through the sixth grade, attending
-        Indian Valley Middle School (IVMS). She went back to co-op with
-        Explorations for the seventh grade, as well as being self-taught. Anna
-        returned to IVMS for the eighth grade, and enrolled in Souderton Area
-        High School (SAHS) for the ninth grade, which she is currently
-        attending.
+        >Anna was born on August 28, 2012, in
+        <a href="https://en.wikipedia.org/wiki/Bryn_Mawr,_Pennsylvania"
+          >Bryn Mawr, PA</a
+        >. She was the second child born to
+        <a class="noLink" href="">Brad</a> and
+        <a class="noLink" href="">Carolyn Herrlinger</a>, after
+        <a class="noLink" href="">Maya Herrlinger</a> (born 2008). She also has
+        an exchange sister &mdash; <a class="noLink" href="">Rahyun</a>, who
+        lives in Korea, and stays with the Herrlingers during exchange
+        trips.</span
+      ><span
+        >In 2017, Anna attended kindergarten for two months before dropping out.
+        The next year, she was in a homeschool co-op for the second grade at
+        <a class="noLink" href="">Schola</a>. She continued with co-ops for the
+        third grade, this time with <a href="" class="noLink">Explorations</a>.
+        Anna attended online school for the fourth grade through the
+        <a href="https://en.wikipedia.org/wiki/Commonwealth_Charter_Academy"
+          >Commonwealth Charter Academy (CCA)</a
+        >, as well as continuing with the Explorations co-op. For the fifth
+        grade, Anna began attending public school at
+        <a
+          href="https://en.wikipedia.org/wiki/Souderton_Area_School_District#Elementary"
+          >Salford Hills Elementary School</a
+        >, and continued with public school through the sixth grade, attending
+        <a
+          href="https://en.wikipedia.org/wiki/Souderton_Area_School_District#Secondary"
+          >Indian Valley Middle School (IVMS)</a
+        >. She went back to co-op with Explorations for the seventh grade, as
+        well as being self-taught.</span
+      ><span
+        >Anna returned to IVMS for the eighth grade, and enrolled in
+        <a href="https://en.wikipedia.org/wiki/Souderton_Area_High_School"
+          >Souderton Area High School (SAHS)</a
+        >
+        for the ninth grade, which she is currently attending.<br /><br />During
+        the 9th grade (2026-27 school year), she joined Kandi Club, Science
+        Fair, and Academic Decathlon as clubs. On September 18 of that year, she
+        began a relationship with <a class="noLink" href="">Callie Littler</a>,
+        who was previously one of her friends and peers.
       </span>
       <h3 id="Academic Decathlon">Academic Decathlon</h3>
-      <hr />
+      <span
+        >Anna joined
+        <a href="https://en.wikipedia.org/wiki/United_States_Academic_Decathlon"
+          >United States Academic Decathlon (USAD)</a
+        >
+        as a club at SAHS for the first time in her freshman year. Her sister,
+        Maya, is a captain of the club, and was a pulling factor for joining. </span
+      ><span
+        >During Round 1 at
+        <a href="https://en.wikipedia.org/wiki/Hershey_High_School"
+          >Hershey High School</a
+        >, for the 9th-10th Honors Division, she won two silver medals and four
+        bronze medals.</span
+      >
       <h3 id="Aerial Silks">Aerial Silks</h3>
-      <hr />
+      <span
+        >Anna has been doing
+        <a href="https://en.wikipedia.org/wiki/Aerial_silk">aerial silks</a>
+        at <a class="noLink" href="">Acrodynamics</a> since 2024. And she's
+        pretty good at it!!</span
+      >
       <h2 id="Personality">Personality</h2>
-      <hr />
       <h2 id="Preferences">Preferences</h2>
+      <h3>Flowers</h3>
+      <span>
+        <ul>
+          <li>Daylily</li>
+          <li>Hydrangea</li>
+          <li>Easter Lily</li>
+          <li>White Rose</li>
+          <li>Wild Hyacinth</li>
+          <li>Lily of the Valley</li>
+          <li>Delphinium belladonna</li>
+        </ul>
+      </span>
+      <h3>Music</h3>
+      <span
+        >Anna has an incredibly varied taste in music. At the moment (November
+        14 2026) her favorite artists have been TV Girl, femtanyl, Sofia Isella,
+        and Billie Eilish.</span
+      >
     </div>
   </body>
 </html>

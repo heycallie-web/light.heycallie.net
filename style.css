@@ -904,6 +904,11 @@ a:hover {
   src: url(assets/fonts/ScoutieSans-VariableFont_wght.ttf) format("truetype");
 }
 
+@font-face {
+  font-family: "Linux Libertine";
+  src: url(assets/fonts/LinLibertine_DR.ttf) format("truetype");
+}
+
 @keyframes rainbow-color-change {
   0%,
   100% {
